@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping
+   PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+   <hibernate-mapping>
+   <class name="com.spring.model.newuser" table="newuser">
+   <id name="id" column="id" type="java.lang.Integer">
+   		<generator class="increment"></generator>
+   </id>
+   
+   <property name="fname" column="fname" type="java.lang.String"></property>
+   <property name="lname" column="lname" type="java.lang.String"></property>
+   <property name="nationality" column="nationality" type="java.lang.String"></property>
+   <property name="email" column="emailid" type="java.lang.String"></property>
+   <property name="phone_no" column="phone_no" type="java.lang.String"></property>
+   </class>
+   </hibernate-mapping>
