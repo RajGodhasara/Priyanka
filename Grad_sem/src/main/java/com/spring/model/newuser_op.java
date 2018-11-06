@@ -1,24 +1,23 @@
 package com.spring.model;
 
 import org.hibernate.Query;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import java.util.ArrayList;
 
+//import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+//import org.springframework.web.servlet.DispatcherServlet;
+
+
 public class newuser_op 
 {
-	SessionFactory sf=null;
-	
-	public newuser_op()
-	{
-		
-	}
-	public newuser_op( SessionFactory sf)
-	{
-		this.sf=sf;
-	}
-	
+	Configuration cf=new Configuration();                
+    Configuration cfg=cf.configure("/hibernate.cfg.xml");
+    SessionFactory sf=cfg.buildSessionFactory();
+    
 	public newuser searchByID(int i)
 	{
 		Session s=sf.openSession();

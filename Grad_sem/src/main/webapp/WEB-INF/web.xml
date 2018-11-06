@@ -18,7 +18,7 @@
   <servlet>
     <servlet-name>dispatcher</servlet-name>
        <servlet-class>
-         com.karsol.string.MyDispatcher.MyDispatcher
+      org.springframework.web.servlet.DispatcherServlet
       </servlet-class>
    
   </servlet>

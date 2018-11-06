@@ -3,14 +3,15 @@ package com.spring.controller;
 import java.util.ArrayList;
 
 
-import org.hibernate.SessionFactory;
+
+//import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.karsol.string.MyDispatcher.MyDispatcher;
+//import com.karsol.string.MyDispatcher.MyDispatcher;
 
 import com.spring.model.newuser;
 import com.spring.model.newuser_op;
@@ -39,9 +40,9 @@ public class panal
 		
 		ModelAndView model =new ModelAndView("succes","command",new newuser());
 		
-		SessionFactory sf=MyDispatcher.getSessionFactory();
 		System.out.println("a");
-		newuser_op op= new newuser_op(sf);
+		newuser_op op= new newuser_op();
+		
 		System.out.println("b");
 	
 		u.setFname(u.getFname());
@@ -62,9 +63,8 @@ public class panal
 
 		ModelAndView model =new ModelAndView("m_info","command",new newuser());
 		
-		SessionFactory sf=MyDispatcher.getSessionFactory();
-		System.out.println("a");
-		newuser_op op= new newuser_op(sf);
+	System.out.println("a");
+		newuser_op op= new newuser_op();
 		System.out.println("b"+op.view());
 		ArrayList<newuser> mi=op.view();
 		model.addObject("mi",mi);
